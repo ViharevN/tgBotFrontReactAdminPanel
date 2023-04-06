@@ -1,0 +1,39 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './components/headerComponent/Header';
+import PetComponent from './components/mainComponent/overviewComponent/petsComponent/PetComponent';
+import Stat from './components/mainComponent/overviewComponent/statsComponent/StatComponent';
+import UserComponent from './components/mainComponent/overviewComponent/usersComponent/UserComponent';
+import BotComponent from "./components/mainComponent/overviewComponent/botComponent/BotComponent";
+import SettingsCompoment from "./components/mainComponent/overviewComponent/settingsComponent/SettingsCompoment";
+import Sidebar from "./components/mainComponent/sideBarComponent/SidebarComponent";
+import classes from "./App.module.css";
+import FooterComponent from "./components/footerComponent/FooterComponent";
+import AddUser from "./services/AddUser";
+import UpdateUser from "./services/UpdateUser";
+
+const App_backup =()=>{
+  return(
+    <div>
+      <BrowserRouter>
+      <Header />
+          <div className={classes.main}>
+              <Sidebar />
+              <div className={classes.container}>
+                  <Routes>
+                      <Route path='/stat' element={<Stat />}/>
+                      <Route path='/pets' element={<PetComponent />}/>
+                      <Route path='/users' element={<UserComponent />}/>
+                      <Route path='/botSettings' element={<BotComponent />}/>
+                      <Route path='/settings' element={<SettingsCompoment />}/>
+                      <Route path='/add' element={<AddUser />}/>
+                      <Route path='/update/:id' element={<UpdateUser />}/>
+                  </Routes>
+              </div>
+          </div>
+          <FooterComponent />
+      </BrowserRouter>
+    </div>
+  )
+}
+
+export default App_backup;

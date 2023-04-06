@@ -1,0 +1,39 @@
+.main{
+    display: flex;
+}
+.sidebar{
+    width: 18%;
+    background: rgb(33, 37, 41);
+    color: white;
+    height: 800px;
+}
+.page{
+    width: 82%;
+    display: flex;
+}
+/*.sidebarContainer{*/
+/*    height: 980px;*/
+/*    width: 256px;*/
+/*    margin-right: 20px;*/
+/*    background: #363740;*/
+
+/*}*/
+.item{
+    height: 50px;
+    width: 256px;
+    display: flex;
+}
+.item a{
+    font-style: normal;
+    color: #DDE2FF;
+    size: 26px;
+    padding: 18px 24px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: .2px;
+    text-decoration: none;
+}
+.item a:hover{
+    color: #000000;
+}
+

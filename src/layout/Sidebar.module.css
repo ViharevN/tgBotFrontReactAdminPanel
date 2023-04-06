@@ -1,0 +1,12 @@
+.sidebar{
+    width: 256px;
+    display: flex;
+    background: rgb(33, 37, 41);
+}
+.item{
+    padding: 10px 25px;
+}
+.item a{
+    color: white;
+    text-decoration: none;
+}
